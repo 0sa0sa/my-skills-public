@@ -27,6 +27,7 @@ cp -r skills/finding-unknowns ~/.claude/skills/
 |---|---|
 | [finding-unknowns](skills/finding-unknowns/SKILL.md) | 曖昧な依頼(「いい感じに」)や不慣れな領域で、unknowns を分類して適切なテクニック(教える/発散プロトタイプ/インタビュー/リファレンス)を選ぶ。長時間の自律実装では逸脱をその場で記録し、マージ前に説明+クイズを提案する |
 | [sonnet-plus](skills/sonnet-plus/SKILL.md) | 実装タスクを「Sonnet サブエージェント+検証済み4フェーズ品質ハーネス」で実行する。ブラインド審査5課題で最上位モデル(Fable 5)と同格(3勝2敗・全点差±0.6以内)をコスト56〜84%で達成。深い監査だけは最上位モデルのレビューを併用([実験リポジトリ](https://github.com/0sa0sa/sonnet-plus)) |
+| [codex-plus](skills/codex-plus/SKILL.md) | 同じ4フェーズ品質ハーネスを OpenAI Codex CLI(`codex exec`)で実行する版。サンドボックス制約に合わせた運用手順(stdin 渡し・`_scratch/` プローブ・resume での追撃)付き。ハーネスの Codex への転移効果は未計測である旨を明記 |
 
 ## 運用メモ
 
