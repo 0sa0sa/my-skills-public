@@ -13,13 +13,28 @@ skills/
 
 ## インストール
 
-スキルを使いたいマシンで、対象ディレクトリを `~/.claude/skills/` にコピーする:
+### npx(推奨 — clone 不要)
+
+```sh
+# 一覧
+npx github:0sa0sa/my-skills-public list
+
+# 個別インストール(~/.claude と ~/.codex の存在する方すべてに入る)
+npx github:0sa0sa/my-skills-public sonnet-plus codex-plus
+
+# 全部入り / ターゲット指定
+npx github:0sa0sa/my-skills-public all
+npx github:0sa0sa/my-skills-public codex-plus --codex   # Codex のみ
+npx github:0sa0sa/my-skills-public sonnet-plus --claude # Claude Code のみ
+```
+
+デフォルトでは、そのマシンに存在するエージェント設定ディレクトリ(`~/.claude` → `~/.claude/skills/`、`~/.codex` → `~/.codex/skills/`)すべてにコピーされる。次のセッションから各エージェントが description を見て自動でロード候補にする。
+
+### 手動コピー
 
 ```sh
 cp -r skills/finding-unknowns ~/.claude/skills/
 ```
-
-次のセッションから Claude Code が description を見て自動でロード候補にする。
 
 ## スキル一覧
 
